@@ -1,16 +1,16 @@
 <template lang="">
-    <header class="header">
+    <header class="header container-fluid">
         <Navbar/>
-        <section>
-            <div class="text-light">
+        <section class="row justify-content-center">
+            <div class="col text-light text-center ">
                 <img src="~/assets/images/Group 4.svg" alt="logo">
-                <hr>
-                <h1>ON HOLD</h1>
+                <hr class="divider my-4 text-light  px-1">
+                <h1>on hold</h1>
                 <div class="row justify-content-center icon-container ">
                     <!-- icons -->
-                    <i class="fa-brands fa-instagram align-middle social-icons"></i>
-                    <i class="fa-brands fa-facebook-f align-middle social-icons"></i>
-                    <i class="fa-brands fa-linkedin-in align-middle social-icons"></i>
+                    <img class="social-icon" width="18px" height="18px" src="~/static/logo-instagram.svg" alt="instagram icon">
+                    <img class="social-icon" width="18px" height="18px" src="~/static/401-facebook.svg" alt="facebook icon">
+                    <img class="social-icon" width="18px" height="18px" src="~/static/459-linkedin2.svg" alt="linkedin icon">
                 </div>
             </div>
         </section>
@@ -27,24 +27,45 @@ export default {
 
 .header {
     background-image: url('~assets/images/Group 6.jpg');
-    background-size: cover;
-}
-.icon-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    margin: 1em;
-}
-.social-icons {
-     
-    width: 1.5em;
-    height: 1.5em;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
+    background-size: auto;
+    background-position: center;
+    color: #FFFFFF;
+    height:347px;
     
 }
+.divider {
+    /*  */
+    height:1px;
+    background-color:white;
+    width: 437px;
+    
+    
+}
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.social-icon {
+    background-color:white;
+    padding:3px;
+    margin:10px;
+    border-radius:50%;
+    font-size: 20px;
+    transition: all .5s;
+}
+.social-icon:hover {
+    background-color:#d8d2d2;
+}
+
+@media screen and (max-width: 700px){
+    .divider {
+        width: 90%;
+        
+    }
+}
+
+
+
     
 </style>
