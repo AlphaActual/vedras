@@ -1,10 +1,10 @@
 <template lang="">
     <header class="header container-fluid">
         <Navbar/>
-        <section class="row justify-content-center">
+        <section class="row justify-content-center section">
             <div class="col text-light text-center ">
-                <img src="~/assets/images/Group 4.svg" alt="logo">
-                <hr class="divider my-4 text-light  px-1">
+                <img class="vedras-logo" src="~/assets/images/Group 4.svg" alt="logo">
+                <hr class="divider text-light  px-1">
                 <h1>on hold</h1>
                 <div class="row justify-content-center icon-container ">
                     <!-- icons -->
@@ -25,6 +25,9 @@ export default {
 </script>
 <style scoped>
 
+.section {
+    padding-top:55px;
+}
 .header {
     background-image: url('~assets/images/Group 6.jpg');
     background-size: auto;
@@ -38,6 +41,8 @@ export default {
     height:1px;
     background-color:white;
     width: 437px;
+    margin-top:24px;
+    margin-bottom: 24px;
     
     
 }
@@ -59,13 +64,18 @@ h1 {
 }
 
 @media screen and (max-width: 700px){
+    .section {
+    padding-top:30px;
+}
+    .vedras-logo {
+        padding-top: 50px;
+    }
     .divider {
         width: 90%;
+        margin-top:30px;
+        margin-bottom:30px;
         
     }
+
 }
-
-
-
-    
 </style>

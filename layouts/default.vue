@@ -22,6 +22,13 @@ body {
     transition-delay: 0s;
     transition-property: all;
 }
+.delay-100 {
+  transition-delay: 1s;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
 
 
     

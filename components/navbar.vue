@@ -16,8 +16,14 @@ export default {
 }
 </script>
 <style scoped>
+    .container {
+        position: absolute;
+        top:0;
+        right:0;
+        padding-right:10vw;
+    }
     nav {
-        padding:30px 0 20px 0;
+        padding:32px 10px 20px 0;
     }
     a {
         text-decoration: none;
@@ -26,6 +32,17 @@ export default {
     a:hover {
         color:#d8d2d2;
         text-decoration:underline;
+    }
+    @media screen and (max-width: 700px){
+        .container {
+            padding-right:0;
+            margin-right:20px;
+        }
+    }
+    @media screen and (max-width: 400px){
+        .email, .tel {
+            font-size: 13px;
+         }
     }
     
 </style>
