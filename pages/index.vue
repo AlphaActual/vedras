@@ -2,17 +2,30 @@
   <div>
     <AppHeader/>
     <RobotsSection />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quibusdam ex, dolores nobis, provident ipsum eius, autem dolorum nisi numquam aspernatur dolor eligendi reprehenderit dolorem quia. Tenetur nisi exercitationem distinctio et minima maiores, blanditiis vero reprehenderit illum alias pariatur fuga. Accusantium reprehenderit nisi quas harum. Aut, cupiditate debitis accusantium fugit quas quaerat aspernatur molestias corporis rerum ipsum fuga odio, iusto vitae, atque tempore porro reiciendis non iste nihil ad! Deleniti dolorum eaque sapiente explicabo. Quisquam dolor nostrum, accusamus aspernatur itaque ullam blanditiis harum dolores magnam aperiam, recusandae sit rem sapiente eum natus necessitatibus. Eius ipsum, expedita impedit sed eligendi exercitationem possimus, eos iure enim architecto voluptate repellendus adipisci quas autem ad quasi. Cum quibusdam sed distinctio impedit quia labore! Doloribus quaerat fugit excepturi laudantium! Eum reiciendis, earum perspiciatis voluptates, vitae quasi eligendi enim accusamus est possimus officia nulla! Sapiente earum voluptas illo temporibus unde, voluptates facilis debitis alias esse ex ratione voluptatum? Ipsum at eius quidem dolore dolorum perspiciatis laboriosam tenetur voluptas! Sequi hic officia earum debitis exercitationem quaerat? Officia, corporis quibusdam magnam delectus id quod cum suscipit nulla! Dicta impedit dolor unde accusamus aliquam tempore, adipisci necessitatibus illo? Optio laborum ex eveniet soluta distinctio repellendus, earum dolore a vel dolorem impedit voluptate excepturi asperiores illum non omnis reiciendis voluptates, architecto ut quibusdam. Dignissimos cum ut harum porro a deserunt fuga corporis, quas magni consequuntur! Cum ratione dolores cupiditate minima sit quaerat unde, nulla temporibus aut perferendis? Similique placeat rerum dolore inventore deleniti? Non maxime ut dolor commodi vero odit quas facere possimus error reiciendis nobis iste laudantium, voluptates quibusdam ratione ipsa sed natus fugit? Non asperiores accusamus officiis hic? Dolore ipsa id ipsam eius alias dignissimos rem ad voluptate ea saepe consequuntur odio facilis, quas reprehenderit magni eum inventore eos dolorem nesciunt nihil sequi. Nesciunt recusandae doloremque cupiditate ratione quos nobis quis, corporis dolores delectus fuga doloribus reprehenderit esse autem tenetur harum, fugiat cum atque nemo tempore sequi! Exercitationem facilis quo soluta temporibus perspiciatis esse molestias quis excepturi, odit aliquam hic minus laboriosam cupiditate iste qui ipsam architecto odio cum provident recusandae mollitia quisquam itaque tenetur! Corrupti non a nobis neque illo nulla perferendis dolores quas ea blanditiis minus beatae, quia earum nesciunt corporis. Ad, doloremque eos vitae totam veritatis neque ipsam saepe delectus mollitia debitis quisquam eligendi non voluptatibus rem earum laudantium aliquid ex beatae odit exercitationem aut similique consectetur nemo. Necessitatibus tenetur expedita molestiae porro fugiat voluptate incidunt sit delectus natus fuga, architecto enim alias tempora aperiam in nesciunt. Quos illum quibusdam iste quasi dicta accusamus amet rem. Ab ad vitae quidem similique aut odio, in hic. Error quo voluptatum provident assumenda, cupiditate non odio ipsam enim tenetur quas tempore fugit pariatur cumque fugiat eveniet necessitatibus optio nihil nisi molestiae natus officia sint quisquam sequi doloribus! Quam veritatis velit consequuntur vitae dolorem in consequatur quibusdam impedit, molestias est iusto obcaecati repellendus rerum ex at quae beatae maiores, pariatur, fugit earum rem quas facilis! Provident voluptatibus harum est. Unde enim nobis magni vel ullam sit commodi velit non.</p>
+    <PonudaSection />
+    <CovidFree />
+    <CallSection />
+    <p>Ok ovo je neki paragraph iz indexa</p>
   </div>
 </template>
 
 <script>
+import RobotsSection from '../components/robotsSection.vue';
+import PonudaSection from '../components/poundaSection.vue';
+import CovidFree from '../components/covidFree.vue';
+import CallSection from '../components/callSection.vue';
 
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components:{
+    RobotsSection,
+    PonudaSection,
+    CovidFree,
+    CallSection
+  }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

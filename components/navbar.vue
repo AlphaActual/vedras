@@ -25,14 +25,7 @@ export default {
     nav {
         padding:32px 10px 20px 0;
     }
-    a {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
-    a:hover {
-        color:#d8d2d2;
-        text-decoration:underline;
-    }
+    
     @media screen and (max-width: 700px){
         .container {
             padding-right:0;
