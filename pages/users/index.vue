@@ -1,15 +1,20 @@
 <template>
-    <div>
-        <h1 class="display-1">USERI:</h1>
-        <User v-for="user in users" :key="user.id" :user="user" />
-    </div>
+    <section class="users-section plr-xxl ptb-lg pb-lg">
+        <h1 class="users-header ptb-lg">Current users</h1>
+        <div class="users-box pb-lg">
+            <User v-for="user in users" :key="user.id" :user="user" />
+        </div>
+        <nuxt-link to="/"><button>Back</button></nuxt-link>
+        <button>Load more</button>
+    </section>
 </template>
 <script>
 import axios from "axios";
 export default {
     data () {
         return {
-            users:[{
+            users:[
+            {
                 id: '60d0fe4f5311236168a109ca',
                 title: 'ms',
                 firstName: 'Sara',
@@ -36,7 +41,8 @@ export default {
                 firstName: 'Roberto',
                 lastName: 'Vega',
                 picture: 'https://randomuser.me/api/portraits/med/men/25.jpg'
-            }]
+            }
+            ]
         }
     },
     async created () {
@@ -50,7 +56,7 @@ export default {
             // const res = await(axios.get('https://dummyapi.io/data/v1/user?',config))
             // console.log(res)
             // this.users = [...res.data.data];
-            console.log("tried");
+            
         } catch (err) {
             console.log(err)
         }
@@ -72,7 +78,26 @@ export default {
 }
 </script>
 <style scoped>
-    
+    .users-section {
+        display:flex;
+        flex-direction: column;
+        
+    }
+    .users-header {
+        text-align: center;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #027FC1;
+        text-shadow: 3px 2px 2px #C8C8C8;
+    }
+    .users-box {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5rem;
+        justify-content: center;
+        
+    }
 </style>
 
 <!-- 63943e0e85c0263aa117e1a8 -->

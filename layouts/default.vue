@@ -39,6 +39,10 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+.plr-sm {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .plr-md {
   padding-left: 50px;
   padding-right: 50px;
@@ -112,11 +116,17 @@ body {
 .pt-sm {
   padding-top: 30px;
 }
+.pt-md {
+  padding-top: 50px;
+}
 .pb-sm {
   padding-bottom: 30px;
 }
 .pb-md {
   padding-bottom: 50px;
+}
+.pb-lg {
+  padding-bottom: 80px;
 }
 
 /* headers */
