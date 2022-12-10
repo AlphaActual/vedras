@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <header class="header container-fluid">
         <Navbar/>
         <section class="row justify-content-center section">
@@ -8,9 +8,17 @@
                 <h1>on hold</h1>
                 <div class="row justify-content-center icon-container ">
                     <!-- icons -->
-                    <img class="social-icon" width="18px" height="18px" src="~/static/logo-instagram.svg" alt="instagram icon">
-                    <img class="social-icon" width="18px" height="18px" src="~/static/401-facebook.svg" alt="facebook icon">
-                    <img class="social-icon" width="18px" height="18px" src="~/static/459-linkedin2.svg" alt="linkedin icon">
+                    <a target="_blank" href="https://www.instagram.com/vedrasgroup/?hl=en">
+                        <img class="social-icon" width="18px" height="18px" src="~/static/logo-instagram.svg" alt="instagram icon">
+                    </a>
+                    
+                    <a target="_blank" href="https://www.facebook.com/vedrasevents/">
+                        <img class="social-icon" width="18px" height="18px" src="~/static/401-facebook.svg" alt="facebook icon">
+                    </a>
+
+                    <a target="_blank" href="https://www.linkedin.com/company/42940956/">
+                        <img class="social-icon" width="18px" height="18px" src="~/static/459-linkedin2.svg" alt="linkedin icon">
+                    </a>
                 </div>
             </div>
         </section>

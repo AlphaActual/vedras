@@ -2,27 +2,32 @@
   <div>
     <AppHeader/>
     <RobotsSection />
-    <PonudaSection />
+    <OfferSection />
     <CovidFree />
     <CallSection />
-    <p>Ok ovo je neki paragraph iz indexa</p>
+    <ServiceSection />
+    <Footer />
   </div>
 </template>
 
 <script>
-import RobotsSection from '../components/robotsSection.vue';
-import PonudaSection from '../components/poundaSection.vue';
-import CovidFree from '../components/covidFree.vue';
-import CallSection from '../components/callSection.vue';
+// import RobotsSection from '../components/robotsSection.vue';
+// import OfferSection from '../components/offerSection.vue';
+// import CovidFree from '../components/covidFree.vue';
+// import CallSection from '../components/callSection.vue';
+// import ServiceSection from '../components/serviceSection.vue';
+
 
 export default {
-  name: 'IndexPage',
-  components:{
-    RobotsSection,
-    PonudaSection,
-    CovidFree,
-    CallSection
-  }
+  name: 'IndexPage'
+  // components:{
+  //   RobotsSection,
+  //   OfferSection,
+  //   CovidFree,
+  //   CallSection,
+  //   ServiceSection,
+  //   Footer
+  // }
 }
 </script>
 

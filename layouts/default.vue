@@ -35,6 +35,10 @@ body {
 
 
 /* sizes */
+.plr-xs {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .plr-md {
   padding-left: 50px;
   padding-right: 50px;
@@ -105,8 +109,14 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.pt-sm {
+  padding-top: 30px;
+}
 .pb-sm {
   padding-bottom: 30px;
+}
+.pb-md {
+  padding-bottom: 50px;
 }
 
 /* headers */
@@ -146,31 +156,9 @@ a:hover {
 }
 
 /* sections */
-@media screen and (min-width: 1065px){
-    .new-section {
-      padding-right: 0;
-    }
-}
-@media screen and (max-width: 1065px){
-    .new-section {
-      flex-direction: column;
-    }
 
-}
 /* divs */
-@media screen and (max-width: 1065px){
-    .new-div {
-      width: 100% !important;
-      padding-right: 0;
-    }
-    .new-div-img {
-      width: 100% !important;
-      margin-right: 0;
-      margin-top: 50px;
-      height: 36.2vh !important;
-      min-height: 300px !important;
-    }
-}
+
 
 
     

@@ -1,5 +1,5 @@
 <template>
-    <section class="new-section ponuda-section plr-xxl ptb-lg">
+    <section class="offer-section plr-xxl ptb-lg">
         <div class="txt-column new-div pr-lg">
             <h3 class="header3 pb-sm">Novo u našoj ponudi!</h3>
             <p>Robotska dezinfekcija i sterilizacija prostora s primjenom u: </p>
@@ -12,17 +12,17 @@
             <a target="_blank" href="http://www.uvd-robots.com/" ><b>Više detalja o UVD Robots</b>  </a>
         </div> 
         
-        <div class="image-column new-div-img mr-lg"></div>
+        <div class="image-column mr-lg"></div>
     </section>
 </template>
 <script>
 export default {
-    name:'PonudaSection'
+    name:'OfferSection'
     
 }
 </script>
 <style scoped>
-.ponuda-section{
+.offer-section{
     display:flex;
     background-color: #027FC1;
     color:#FFFFFF;
@@ -58,7 +58,27 @@ ul {
       line-height: 25px;
     } 
 }
-    
 
+@media screen and (min-width: 1065px){
+    .offer-section {
+      padding-right: 0;
+    }
+}
+@media screen and (max-width: 1065px){
+    .offer-section {
+      flex-direction: column;
+    }
+    .txt-column {
+      width: 100% !important;
+      padding-right: 0;
+    }
+    .image-column {
+      width: 100% !important;
+      margin-right: 0;
+      margin-top: 50px;
+      height: 36.2vh !important;
+      min-height: 300px !important;
+    }
 
+}
 </style>
