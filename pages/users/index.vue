@@ -4,8 +4,12 @@
         <div class="users-box pb-lg">
             <User v-for="user in users" :key="user.id" :user="user" />
         </div>
-        <nuxt-link to="/"><button>Back</button></nuxt-link>
-        <button>Load more</button>
+
+        
+        <nuxt-link class="back-link" to="/">
+            <i class="fa-solid fa-arrow-left-long"></i>
+        </nuxt-link>
+        <button class="btn-load" @click="loadMoreUsers">Load more</button>
     </section>
 </template>
 <script>
@@ -42,7 +46,8 @@ export default {
                 lastName: 'Vega',
                 picture: 'https://randomuser.me/api/portraits/med/men/25.jpg'
             }
-            ]
+            ],
+            page : '999'
         }
     },
     async created () {
@@ -54,8 +59,8 @@ export default {
         }
         try {
             // const res = await(axios.get('https://dummyapi.io/data/v1/user?',config))
-            // console.log(res)
             // this.users = [...res.data.data];
+            // this.page = res.data.page;
             
         } catch (err) {
             console.log(err)
@@ -73,6 +78,18 @@ export default {
                 }
             ]
         }
+    },
+    methods : {
+        async loadMoreUsers() {
+            this.users.push({
+                id: '60d0fe4f5311236168a19999',
+                title: 'mr',
+                firstName: 'ZINGI',
+                lastName: 'ZINGI',
+                picture: 'https://randomuser.me/api/portraits/med/men/25.jpg'
+            });
+            alert(`broj stranice: ${this.page}`)
+        }
     }
     
 }
@@ -87,7 +104,7 @@ export default {
         text-align: center;
         font-size: 5rem;
         font-weight: bold;
-        color: #027FC1;
+        color: #DD6076;
         text-shadow: 3px 2px 2px #C8C8C8;
     }
     .users-box {
@@ -98,6 +115,26 @@ export default {
         justify-content: center;
         
     }
+    .back-link {
+        color:#5c5c5c;
+        font-size: 2rem;
+        transition: all .5s;
+        width: 3rem;
+        
+    }
+    .btn-load {
+        width:7rem;
+        align-self: center;
+        text-decoration: none;
+        border:none;
+        background-color: #FFFFFF;
+        transition:all .5s;
+        font-size: 1.2rem;
+    }
+    .back-link:hover ,.btn-load:hover {
+        color:#b7b7b7;
+    }
+
 </style>
 
 <!-- 63943e0e85c0263aa117e1a8 -->

@@ -1,8 +1,8 @@
 <template>
-    <nuxt-link class="nuxt-l" :to="user.id">
+    <nuxt-link class="nuxt-l" :to="'users/' + user.id">
         <div class="user-box box-shadow ptb-md plr-md">
             <img class="user-image" :src="user.picture" alt="user photo">
-            <p :class="gender" style="font-weight: bold;">{{user.title}}</p>
+            <p :class="`${gender} title-paragraph`">{{user.title}}</p>
             <p>{{user.firstName}}</p>
             <p>{{user.lastName}}</p>    
         </div>
@@ -13,12 +13,14 @@ export default {
     name: 'User',
     data () {
         return {
-            user: this.user,
             gender: 'female'
         }     
     },
     props: {
         user: Object,    
+    },
+    created (){
+        this.checkGender()
     },
     methods : {
         checkGender () {
@@ -26,9 +28,6 @@ export default {
             else this.gender = 'female';
         }
     },
-    beforeMount(){
-        this.checkGender()
-    }
 }
 </script>
 <style scoped >
@@ -51,7 +50,6 @@ export default {
     .user-image {
         width: 70%;
         border-radius: 10px;
-        /* height: 72px; */
         margin-bottom:1rem;
     }
     .box-shadow {
@@ -65,7 +63,7 @@ export default {
     }
     .nuxt-l {
         text-decoration: none;
-        color:#FFFFFF;
+        color:#5C5C5C;
     }
     .title-paragraph {
         font-weight: bold;

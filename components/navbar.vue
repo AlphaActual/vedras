@@ -4,7 +4,7 @@
             <nav class="d-flex">
                 <b class=" d-none d-sm-inline">Kontaktirajte nas</b> 
                 <a class="email px-2" href="mailto:info@vedras.hr">info@vedras.hr</a> 
-                <a class="tel pr-5" href="mailto:info@vedras.hr">+385 98 9608 920</a>
+                <a class="tel pr-5" href="tel: +385 98 9608 920">+385 98 9608 920</a>
                 <a href="/"><b>EN</b></a>
             </nav>   
         </div>
