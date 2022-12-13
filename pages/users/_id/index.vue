@@ -16,10 +16,10 @@
                 <p>{{userInfo.location?.city}}, {{userInfo.location?.state}}</p>                  
                 <p>{{userInfo.location?.country}}</p> 
                 
-                <p><span :class="`user-attribute ${userInfo.gender}`">Time zone:</span> {{userDates.location?.timezone}} UTC</p>
+                <p><span :class="`user-attribute ${userInfo.gender}`">Time zone:</span> {{userInfo.location?.timezone}} UTC</p>
             </div>
         </div>
-        <a class="back-link pt-md" href="/users">Go back</a>
+        <nuxt-link class="back-link pt-md" to="/users" >Go back</nuxt-link>
     </section>
 </template>
 <script>
@@ -39,8 +39,16 @@ export default {
             }
         }
         try {
-            const res = await(axios.get(`https://dummyapi.io/data/v1/user/${this.$route.params.id}`,config))
-            console.log(res)
+            if (Object.keys(this.userInfo).length === 0){
+                const res = await(axios.get(`https://dummyapi.io/data/v1/user/${this.$route.params.id}`,config))
+                console.log("API was called for single user data")
+
+                this.userInfo = res.data;
+     
+                this.convertDates('dateOfBirth',this.userInfo.dateOfBirth)
+                this.convertDates('registerDate',this.userInfo.registerDate)
+                this.convertDates('updatedDate',this.userInfo.updatedDate)
+            }
 
             //////////    SIMULACIJA KASNJENJA PODATAKA
             // function sendData() {
@@ -52,19 +60,7 @@ export default {
             // }
             // const res = await sendData();
             // this.userInfo = res;
-
-               
-            this.userInfo = res.data;
-            
-            
-
-
-            //this.userInfo = {"id":"60d0fe4f5311236168a109cb","title":"miss","firstName":"Edita","lastName":"Vestering","picture":"https://randomuser.me/api/portraits/med/women/89.jpg","gender":"female","email":"edita.vestering@example.com","dateOfBirth":"1956-04-09T00:10:35.555Z","phone":"(019)-646-0430","location":{"street":"1371, Dilledonk-Zuid","city":"Den Bommel","state":"Gelderland","country":"Netherlands","timezone":"-5:00"},"registerDate":"2021-06-21T21:02:07.533Z","updatedDate":"2021-06-21T21:02:07.533Z"};
-            
-            this.convertDates('dateOfBirth',this.userInfo.dateOfBirth)
-            this.convertDates('registerDate',this.userInfo.registerDate)
-            this.convertDates('updatedDate',this.userInfo.updatedDate)
-            
+  
         } catch (err) {
             console.log(err)
         }
@@ -101,17 +97,27 @@ p {
     align-items: center;
 }
 .user-info {
-        width:70%;
-        min-height:40rem;
-        background-color: #ffd700;
-        font-size:1.5rem;
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        transition:all .5s;
-        
+    width:70%;
+    min-height:40rem;
+    background-color: #ffd700;
+    font-size:1.5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition:all .5s;
+    
+}
+@media screen and (max-width: 700px){
+    .user-info {
+        width:95%;
+    } 
+}
+@media screen and (max-width: 470px){
+    .user-info {
+      font-size: 1.2rem;
+    } 
 }
 .user-link-female {
     color:#027FC1;
@@ -151,5 +157,8 @@ p {
     color:#a5a5a5;
     text-decoration: none;
 }
-    
+
+
+
+
 </style>
