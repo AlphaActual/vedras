@@ -17,36 +17,7 @@ import axios from "axios";
 export default {
     data () {
         return {
-            users:[
-            // {
-            //     id: '60d0fe4f5311236168a109ca',
-            //     title: 'ms',
-            //     firstName: 'Sara',
-            //     lastName: 'Andersen',
-            //     picture: 'https://randomuser.me/api/portraits/women/58.jpg'
-            // },
-            // {
-            //     id: '60d0fe4f5311236168a109cb',
-            //     title: 'miss',
-            //     firstName: 'Edita',
-            //     lastName: 'Vestering',
-            //     picture: 'https://randomuser.me/api/portraits/med/women/89.jpg'
-            // },
-            // {
-            //     id: '60d0fe4f5311236168a109cc',
-            //     title: 'ms',
-            //     firstName: 'Adina',
-            //     lastName: 'Barbosa',
-            //     picture: 'https://randomuser.me/api/portraits/med/women/28.jpg'
-            // },
-            // {
-            //     id: '60d0fe4f5311236168a109cd',
-            //     title: 'mr',
-            //     firstName: 'Roberto',
-            //     lastName: 'Vega',
-            //     picture: 'https://randomuser.me/api/portraits/med/men/25.jpg'
-            // }
-            ],
+            users:[],
             currentPage : '0',
             showSpinner : false
         }
@@ -61,9 +32,10 @@ export default {
         try {
 
             if(this.users.length === 0){
-                console.log("API call was made")
+                this.showSpinner = true;
                 const res = await(axios.get('https://dummyapi.io/data/v1/user?limit=10',config))
                 this.users = [...res.data.data];
+                this.showSpinner = false;
             }
             
         } catch (err) {

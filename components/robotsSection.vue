@@ -9,34 +9,14 @@
             </div>
 
             <div class="d-flex robot-column">
-                <img class="robot-image" src="~/assets/images/kill-stroj.png" alt="robot photo">
-                <div class="blue-box delay-100 d-flex align-items-center"><span>ubija 99,99% mikroorganizama</span> </div>
+                <img class="robot-image fade-in" src="~/assets/images/kill-stroj.png" alt="robot photo">
+                <div class="blue-box delay-100 fade-in d-flex align-items-center"><span>ubija 99,99% mikroorganizama</span> </div>
             </div>
         </section>      
 </template>
 <script>
 export default {
     name : 'RobotsSection'
-    // mounted () {
-    //     if(process.browser){
-
-    //         console.log("Im in the if statement")
-    //         const observer = new IntersectionObserver(entries => {
-    //         entries.forEach(entry => {
-    //                 if(entry.isIntersecting){
-    //                     entry.target.classList.add('visible');
-    //                     console.log("IT IS INTERSECTING");
-    //                 };                   
-    //             })
-    //         })
-
-    //         const elementsToObserve = document.querySelectorAll('.fade-from-bottom');
-            
-    //         elementsToObserve.forEach(el => observer.observe(el));
-
-
-    //     }
-    // }
 }
 
 

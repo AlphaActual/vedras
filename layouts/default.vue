@@ -19,13 +19,13 @@ export default {
             const elementsToObserve = document.querySelectorAll(`.${observedClass}`);
             elementsToObserve.forEach(el => observer.observe(el));
       }
-    },
+  },
   mounted () {
-      if(process.browser){
-        this.setupObserver('fade-from-bottom','visible')
-      }
+    if(process.browser){
+      this.setupObserver('fade-from-bottom','visible');
+      this.setupObserver('fade-in','visible');
     }
-    
+  }
     
 }
 </script>
@@ -38,8 +38,8 @@ body {
 
  /* TRANSITIONS */
 
- /* fade in */
-.fade-from-bottom {
+ 
+ .fade-from-bottom {  /* fromBottom */
     opacity: 0;
     transform: translateY(10%);
     transition: all 1s cubic-bezier(.36,.69,.3,.64);
@@ -49,12 +49,23 @@ body {
     transform: translateY(0);
 }
 
-.fade-in {
+.fade-in { /* fromOpacity */
   opacity: 0;
   transition: all 1s cubic-bezier(.36,.69,.3,.64);
 }
 .fade-in.visible {
   opacity: 1;
+}
+
+/* delays */
+.delay-25 {
+  transition-delay: .25s;
+}
+.delay-50 {
+  transition-delay: .5s;
+}
+.delay-100 {
+  transition-delay: 1s;
 }
 
 

@@ -1,6 +1,6 @@
 <template>
     <section class="service-section ptb-xl plr-xxl">
-        <div class="text-column plr-md mr-lg ">
+        <div class="text-column delay-50 fade-in plr-md mr-lg ">
             <h3 class="header3">Naše tehničko osoblje spremno je u najkraćem mogućem roku izvršiti uslugu koja uključuje:</h3> 
             <ul class="pt-sm pb-md">
                 <li class="li-service">dopremu UV-dezinfekcijskog robota</li>
@@ -13,7 +13,7 @@
             </a>
         </div>
 
-        <div class="image-column"></div>
+        <div class="image-column delay-20 fade-from-bottom"></div>
     </section>
 </template>
 <script>

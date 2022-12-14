@@ -5,7 +5,7 @@
             <div class="col text-light text-center ">
                 <img class="vedras-logo" src="~/assets/images/Group 4.svg" alt="logo">
                 <hr class="divider text-light  px-1">
-                <h1>on hold</h1>
+                <h1 class="fade-from-bottom">on hold</h1>
                 <div class="row justify-content-center icon-container ">
                     <!-- icons -->
                     <a target="_blank" href="https://www.instagram.com/vedrasgroup/?hl=en">

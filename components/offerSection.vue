@@ -12,7 +12,7 @@
             <a target="_blank" href="http://www.uvd-robots.com/" ><b>Više detalja o UVD Robots</b>  </a>
         </div> 
         
-        <div class="image-column mr-lg"></div>
+        <div class="image-column mr-lg delay-50 fade-in"></div>
     </section>
 </template>
 <script>

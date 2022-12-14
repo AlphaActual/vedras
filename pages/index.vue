@@ -11,23 +11,30 @@
 </template>
 
 <script>
-// import RobotsSection from '../components/robotsSection.vue';
-// import OfferSection from '../components/offerSection.vue';
-// import CovidFree from '../components/covidFree.vue';
-// import CallSection from '../components/callSection.vue';
-// import ServiceSection from '../components/serviceSection.vue';
-
 
 export default {
-  name: 'IndexPage'
-  // components:{
-  //   RobotsSection,
-  //   OfferSection,
-  //   CovidFree,
-  //   CallSection,
-  //   ServiceSection,
-  //   Footer
-  // }
+  name: 'IndexPage',
+  methods : {
+      setupObserver(observedClass, classToBeAdded) {
+            const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add(classToBeAdded);
+                    };                   
+                })
+            })
+
+            const elementsToObserve = document.querySelectorAll(`.${observedClass}`);
+            elementsToObserve.forEach(el => observer.observe(el));
+      }
+  },
+  mounted () {
+    if(process.browser){
+      this.setupObserver('fade-from-bottom','visible');
+      this.setupObserver('fade-in','visible');
+    }
+  }
+  
 }
 </script>
 
