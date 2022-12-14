@@ -4,7 +4,28 @@
     </div>
 </template>
 <script>
+
 export default {
+  methods : {
+      setupObserver(observedClass, classToBeAdded) {
+            const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add(classToBeAdded);
+                    };                   
+                })
+            })
+
+            const elementsToObserve = document.querySelectorAll(`.${observedClass}`);
+            elementsToObserve.forEach(el => observer.observe(el));
+      }
+    },
+  mounted () {
+      if(process.browser){
+        this.setupObserver('fade-from-bottom','visible')
+      }
+    }
+    
     
 }
 </script>
@@ -15,23 +36,27 @@ body {
     color:#5C5C5C;
 }
 
-/* transitions */
-.transition1 {
-    
+ /* TRANSITIONS */
+
+ /* fade in */
+.fade-from-bottom {
+    opacity: 0;
+    transform: translateY(10%);
     transition: all 1s cubic-bezier(.36,.69,.3,.64);
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.36, 0.69, 0.3, 0.64);
-    transition-delay: 0s;
-    transition-property: all;
 }
-.delay-100 {
-  transition-delay: 1s;
+.fade-from-bottom.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* * {
-    outline: 1px solid;
-    
-} */
+.fade-in {
+  opacity: 0;
+  transition: all 1s cubic-bezier(.36,.69,.3,.64);
+}
+.fade-in.visible {
+  opacity: 1;
+}
+
 
 
 /* sizes */

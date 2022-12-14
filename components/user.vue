@@ -1,5 +1,6 @@
 <template>
     <nuxt-link class="nuxt-l" :to="'users/' + user.id">
+    <!-- <nuxt-link class="nuxt-l" :to="user.id"> -->
         <div class="user-box box-shadow ptb-md plr-md">
             <img class="user-image" :src="user.picture" alt="user photo">
             <p :class="`${gender} title-paragraph`">{{user.title}}</p>
