@@ -69,16 +69,15 @@ ul {
       flex-direction: column;
     }
     .txt-column {
-      width: 100% !important;
+      width: 100%;
       padding-right: 0;
     }
     .image-column {
-      width: 100% !important;
+      width: 100%;
       margin-right: 0;
       margin-top: 50px;
-      height: 36.2vh !important;
-      min-height: 300px !important;
+      height: 36.2vh;
+      min-height: 300px;
     }
-
 }
 </style>

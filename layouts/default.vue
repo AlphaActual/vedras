@@ -6,26 +6,6 @@
 <script>
 
 export default {
-  methods : {
-      setupObserver(observedClass, classToBeAdded) {
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                        entry.target.classList.add(classToBeAdded);
-                    };                   
-                })
-            })
-
-            const elementsToObserve = document.querySelectorAll(`.${observedClass}`);
-            elementsToObserve.forEach(el => observer.observe(el));
-      }
-  },
-  mounted () {
-    if(process.browser){
-      this.setupObserver('fade-from-bottom','visible');
-      this.setupObserver('fade-in','visible');
-    }
-  }
     
 }
 </script>
@@ -37,9 +17,7 @@ body {
 }
 
  /* TRANSITIONS */
-
- 
- .fade-from-bottom {  /* fromBottom */
+ .fade-from-bottom {  
     opacity: 0;
     transform: translateY(10%);
     transition: all 1s cubic-bezier(.36,.69,.3,.64);
@@ -49,7 +27,7 @@ body {
     transform: translateY(0);
 }
 
-.fade-in { /* fromOpacity */
+.fade-in { 
   opacity: 0;
   transition: all 1s cubic-bezier(.36,.69,.3,.64);
 }
@@ -177,6 +155,7 @@ body {
     font-size: 25px;
     }
 }
+
 /* paragraphs */
 .p-styled {
   color: #fff;
@@ -190,6 +169,7 @@ body {
       line-height: 25px;
     }
 }
+
 /* links */
 a {
     text-decoration: none;
@@ -200,12 +180,5 @@ a:hover {
     color:#d8d2d2;
     text-decoration:underline;
 }
-
-/* sections */
-
-/* divs */
-
-
-
-    
+  
 </style>

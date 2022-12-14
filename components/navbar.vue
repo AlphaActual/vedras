@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row justify-content-end">
             <nav class="d-flex">
-                <b class=" d-none d-sm-inline">Kontaktirajte nas</b> 
+                <b class="d-none d-sm-inline">Kontaktirajte nas</b> 
                 <a class="email px-2" href="mailto:info@vedras.hr">info@vedras.hr</a> 
                 <a class="tel pr-5" href="tel: +385 98 9608 920">+385 98 9608 920</a>
-                <a href="/"><b>EN</b></a>
+                <nuxt-link to="/"><b>EN</b></nuxt-link>
             </nav>   
         </div>
     </div>
