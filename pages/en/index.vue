@@ -1,21 +1,36 @@
 <template>
-  <div>
-    <AppHeader/>
-    <RobotsSection />
-    <OfferSection />
-    <CovidFree />
-    <CallSection />
-    <ServiceSection />
-    <Footer />
+  <div> 
+    <AppHeader_en />
+    <RobotsSection_en />
+    <OfferSection_en />
+    <CovidFree_en />
+    <CallSection_en />
+    <ServiceSection_en />
+    <Footer_en />
     <nuxt-link class="users-link" to="/users"><button>Users</button></nuxt-link>
   </div>
 </template>
 
 <script>
- 
+import AppHeader_en from '~/components/appHeader_en.vue';
+import RobotsSection_en from '~/components/robotsSection_en.vue';
+import OfferSection_en from '~/components/offerSection_en.vue';
+import CovidFree_en from '~/components/covidFree_en.vue';
+import CallSection_en from '~/components/callSection_en.vue';
+import ServiceSection_en from '~/components/serviceSection_en.vue';
+import Footer_en from '~/components/footer_en.vue';
 
 export default {
-  name: 'IndexPage',
+  name: 'IndexPage_en',
+  components: {
+    AppHeader_en,
+    RobotsSection_en,
+    OfferSection_en,
+    CovidFree_en,
+    CallSection_en,
+    ServiceSection_en,
+    Footer_en
+  },
   methods : {
     setupObserver(observedClass, classToBeAdded) {
       const observer = new IntersectionObserver(entries => {
@@ -46,7 +61,6 @@ export default {
 </script>
 
 <style scoped>
-
 .users-link {
   display:block;
   position:fixed;
@@ -69,4 +83,5 @@ button:hover {
     outline: 1px solid #027fc1;
     
 }
+
 </style>

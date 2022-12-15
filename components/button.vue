@@ -16,7 +16,6 @@ button {
     font-size: 16px;
     letter-spacing: -.29px;
     line-height: 36px;
-    transition: all .5;
     color: #FFFFFF;
     background-color: #027fc1;
     box-shadow:none;
