@@ -1,7 +1,7 @@
 # vedras website
 
 ## Description
-Replica of the fictional website [https://vedras.hr/](https://vedras.hr/) made in Nuxt.js
+Replica of the website [https://vedras.hr/](https://vedras.hr/) made in Nuxt.js
 
 Project is based on Node.js version v16.18.1
 ### Additional functionality:
