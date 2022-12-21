@@ -8,8 +8,14 @@
                 <p><span :class="`user-attribute ${userInfo.gender}`">Last Name:</span> {{userInfo.lastName}}</p>
                 <p><span :class="`user-attribute ${userInfo.gender}`">Gender:</span> {{userInfo.gender}}</p>
                 <p><span :class="`user-attribute ${userInfo.gender}`">Email:</span> <a :class="`user-link-${userInfo.gender}`" :href="`mailto:${userInfo.email}`">{{userInfo.email}}</a></p>
-                <p><span :class="`user-attribute ${userInfo.gender}`">Date of birth:</span> {{userDates.dateOfBirth?.day}}.{{userDates.dateOfBirth?.month}}.{{userDates.dateOfBirth?.year}}.</p>
-                <p><span :class="`user-attribute ${userInfo.gender}`">Register date:</span> {{userDates.registerDate?.day}}.{{userDates.registerDate?.month}}.{{userDates.registerDate?.year}}.</p>
+                <p><span :class="`user-attribute ${userInfo.gender}`">Date of birth:</span> 
+                    <span v-if="$fetchState.pending">...</span>
+                    <span v-else-if="$fetchState.error">Error</span>
+                    <span v-else>{{userInfo.dateOfBirth | convertDate}}</span></p>
+                <p><span :class="`user-attribute ${userInfo.gender}`">Register date:</span>
+                    <span v-if="$fetchState.pending">...</span>
+                    <span v-else-if="$fetchState.error">Error</span>
+                    <span v-else>{{userInfo.registerDate | convertDate}}</span></p>
                 <p><span :class="`user-attribute ${userInfo.gender}`">Phone: </span><a :class="`user-link-${userInfo.gender}`" :href="`tel:${userInfo.phone}`">{{userInfo.phone}}</a></p>
                     
                 <p><span :class="`user-attribute ${userInfo.gender}`">Location:</span> {{userInfo.location?.street}},</p> 
@@ -27,11 +33,10 @@ import axios from 'axios';
 export default {
     data () {
         return {
-            userInfo: {},
-            userDates: {}
+            userInfo: {}
         }
     },
-    async created () {
+    async fetch () {
         const config = {
             headers: {
                 'Accept': 'application/json',
@@ -39,49 +44,17 @@ export default {
             }
         }
         try {
+            // If the object is empty get fresh data
             if (Object.keys(this.userInfo).length === 0){
                 const res = await(axios.get(`https://dummyapi.io/data/v1/user/${this.$route.params.id}`,config))
-                console.log("API was called for single user data")
-
                 this.userInfo = res.data;
-     
-                this.convertDates('dateOfBirth',this.userInfo.dateOfBirth)
-                this.convertDates('registerDate',this.userInfo.registerDate)
-                this.convertDates('updatedDate',this.userInfo.updatedDate)
             }
-
-            //////////    SIMULACIJA KASNJENJA PODATAKA
-            // function sendData() {
-            //     return new Promise(resolve => {
-            //         setTimeout(() => {
-            //             resolve({"id":"60d0fe4f5311236168a109cb","title":"miss","firstName":"Edita","lastName":"Vestering","picture":"https://randomuser.me/api/portraits/med/women/89.jpg","gender":"female","email":"edita.vestering@example.com","dateOfBirth":"1956-04-09T00:10:35.555Z","phone":"(019)-646-0430","location":{"street":"1371, Dilledonk-Zuid","city":"Den Bommel","state":"Gelderland","country":"Netherlands","timezone":"-5:00"},"registerDate":"2021-06-21T21:02:07.533Z","updatedDate":"2021-06-21T21:02:07.533Z"});
-            //         }, 4000);
-            //     });
-            // }
-            // const res = await sendData();
-            // this.userInfo = res;
   
         } catch (err) {
             console.log(err)
         }
         
-    },
-    methods: {
-        convertDates (attribute, isoStrDate) {
-            const dateObj = new Date(isoStrDate);
-
-            const str_year = dateObj.getUTCFullYear();
-            const str_month = ('0' + (dateObj.getUTCMonth()+1)).slice(-2);
-            const str_day = ('0' + dateObj.getUTCDate()).slice(-2);
-
-            this.userDates[attribute] = {
-                day: str_day,
-                month : str_month,
-                year : str_year
-            }; 
-             
-        }
-    }    
+    }   
 }
 </script>
 <style scoped>

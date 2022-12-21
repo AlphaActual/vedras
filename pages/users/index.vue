@@ -1,5 +1,5 @@
 <template>
-    <section class="users-section plr-xxl ptb-lg">
+    <section class="users-section plr-xxl pb-lg">
         <h1 class="users-header ptb-lg">Current users</h1>
         <div class="users-box pb-lg">
             <User v-for="user in users" :key="user.id" :user="user" />
@@ -22,7 +22,7 @@ export default {
             showSpinner : false
         }
     },
-    async created () {
+    async fetch () {
         const config = {
             headers: {
                 'Accept': 'application/json',
