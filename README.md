@@ -1,4 +1,13 @@
-# vedras
+# vedras website
+
+## Description
+Replica of the website [https://vedras.hr/](https://vedras.hr/) made in Nuxt.js
+
+Project is based on Node.js version v16.18.1
+### Additional functionality:
+Subpage `users` with a preview and details of users obtained from the [https://dummyapi.io/](https://dummyapi.io/)
+
+Preview of the static generated site is available on [https://vedras-project.netlify.app/](https://vedras-project.netlify.app/)
 
 ## Build Setup
 
