@@ -71,7 +71,7 @@ p {
 }
 .user-info {
     width:70%;
-    min-height:40rem;
+    padding: 2rem 0;
     background-color: #ffd700;
     font-size:1.5rem;
     display:flex;
@@ -85,6 +85,7 @@ p {
 @media screen and (max-width: 700px){
     .user-info {
         width:95%;
+        font-size:1.2rem;
     } 
 }
 @media screen and (max-width: 470px){
