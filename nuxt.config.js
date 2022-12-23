@@ -1,3 +1,4 @@
+import i18n from './config/i18n'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -41,7 +42,27 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-  ],
+    /* other modules */
+    [
+     '@nuxtjs/i18n',
+     {
+       vueI18nLoader: true,
+       defaultLocale: 'hr',
+        locales: [
+         {
+            code: 'en',
+            name: 'English'
+         },
+         {
+            code: 'hr',
+            name: 'Hrvatski'
+         }
+       ],
+      //  i18n importano na vrhu dokumenta
+       vueI18n: i18n
+     }
+    ]
+   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -49,6 +70,9 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // i18n
+    '@nuxtjs/i18n'
+    
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
