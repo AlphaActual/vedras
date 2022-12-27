@@ -3,7 +3,7 @@
         <div class="call-image"></div>
 
         <div class="call-text plr-md ptb-md">
-            <p class="plr-md">Želite vašim klijentima i zaposlenicima pružiti potpuno čist prostor? Kontaktirajte nas odmah, neka vaš prostor bude #covidfree!</p>
+            <p class="plr-md">{{ $t('contact-now-p') }}</p>
         </div>
     </section>
 </template>

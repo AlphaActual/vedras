@@ -9,15 +9,15 @@
                 <div class="row justify-content-center icon-container ">
                     <!-- icons -->
                     <a target="_blank" href="https://www.instagram.com/vedrasgroup/?hl=en">
-                        <img class="social-icon" width="18px" height="18px" src="~/static/logo-instagram.svg" alt="instagram ikona">
+                        <img class="social-icon" width="18px" height="18px" src="~/static/logo-instagram.svg" :alt="$t('instagram-alt')">
                     </a>
                     
                     <a target="_blank" href="https://www.facebook.com/vedrasevents/">
-                        <img class="social-icon" width="18px" height="18px" src="~/static/401-facebook.svg" alt="facebook ikona">
+                        <img class="social-icon" width="18px" height="18px" src="~/static/401-facebook.svg" :alt="$t('facebook-alt')">
                     </a>
 
                     <a target="_blank" href="https://www.linkedin.com/company/42940956/">
-                        <img class="social-icon" width="18px" height="18px" src="~/static/459-linkedin2.svg" alt="linkedin ikona">
+                        <img class="social-icon" width="18px" height="18px" src="~/static/459-linkedin2.svg" :alt="$t('linked-in-alt')">
                     </a>
                 </div>
             </div>

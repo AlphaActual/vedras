@@ -1,15 +1,15 @@
 <template>
     <section class="offer-section plr-xxl ptb-lg">
         <div class="txt-column new-div pr-lg">
-            <h3 class="header3 pb-sm">Novo u našoj ponudi!</h3>
-            <p>Robotska dezinfekcija i sterilizacija prostora s primjenom u: </p>
+            <h3 class="header3 pb-sm">{{ $t('offer-title') }}</h3>
+            <p>{{ $t('desinfection-p') }}</p>
             <ul>
-                <li class="list-item">Turizmu (hoteli, apartmani, kuće za odmor, mobilne kućice...)</li>
-                <li class="list-item">Industriji (tvornice, skladišta, pogoni...) </li>
-                <li class="list-item">Javnim mjestima (domovi zdravlja, vrtići, škole, fakulteti, uredi, zračne luke, kolodvori, fitness dvorane, šoping centri...)</li>
+                <li class="list-item">{{ $t('turism-li') }}</li>
+                <li class="list-item">{{ $t('industry-li') }}</li>
+                <li class="list-item">{{ $t('public-li') }}</li>
             </ul> 
-            <p class="p-styled ptb-sm">Roboti konstruirani za čišćenje operacijskih sala i laboratorija, sada dezinficiraju vaše poslovne i privatne prostore.</p> 
-            <a target="_blank" href="http://www.uvd-robots.com/" ><b>Više detalja o UVD Robots</b>  </a>
+            <p class="p-styled ptb-sm">{{ $t('robots-p') }}</p> 
+            <a target="_blank" href="http://www.uvd-robots.com/" ><b>{{ $t('robots-details') }}</b></a>
         </div> 
         
         <div class="image-column mr-lg delay-50 fade-in"></div>

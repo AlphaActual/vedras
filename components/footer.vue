@@ -1,9 +1,9 @@
 <template>
     <footer class="footer ptb-xl plr-xxl">
-        <p class="">Za više informacija pišite nam na mail:</p> 
+        <p class="">{{ $t('more-info-p') }}</p> 
         <div class="footer-wrapper">
-            <a href="mailto:info@vedras.hr"><b class="fade-from-bottom">info@vedras.hr</b></a> 
-            <p class="plr-xs fade-from-bottom"> ili nazovite broj </p> 
+            <a :href="`mailto:${$t('email')}`"><b class="fade-from-bottom">{{ $t('email') }}</b></a> 
+            <p class="plr-xs fade-from-bottom"> {{ $t('or-call-p') }} </p> 
             <a href="tel:385989608920"><b class="fade-from-bottom">+385 98 9608 920</b></a>
         </div>
     </footer>

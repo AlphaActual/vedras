@@ -1,12 +1,10 @@
 <template>
-    <button>{{content}}</button>
+    <button>{{ $t('download-btn')}}</button>
 </template>
 <script>
 export default {
     name: 'ButtonPrimary',
-    props: {
-        content: String,
-    }
+    
 }
 </script>
 <style scoped>

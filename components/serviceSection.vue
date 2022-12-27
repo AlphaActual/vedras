@@ -1,15 +1,15 @@
 <template>
     <section class="service-section ptb-xl plr-xxl">
         <div class="text-column delay-50 fade-in plr-md mr-lg ">
-            <h3 class="header3">Naše tehničko osoblje spremno je u najkraćem mogućem roku izvršiti uslugu koja uključuje:</h3> 
+            <h3 class="header3">{{ $t('includes-h3') }}</h3> 
             <ul class="pt-sm pb-md">
-                <li class="li-service">dopremu UV-dezinfekcijskog robota</li>
-                <li class="li-service">mapiranje prostorija predviđenih za dezinfekciju</li>
-                <li class="li-service">kontrolu rada tijekom dezinfekcije</li> 
-                <li class="li-service">otpremu UV-dezinfekcijskog robota</li>
+                <li class="li-service">{{ $t('robot-transport-li') }}</li>
+                <li class="li-service">{{ $t('mapping-li') }}</li>
+                <li class="li-service">{{ $t('control-li') }}</li> 
+                <li class="li-service">{{ $t('removal-li') }}</li>
             </ul> 
             <a href="http://vedras.hr/download/Vedras_dezinfekcija_UVD_Robotima.pdf" target="_blank">
-                <Button content="PREUZMI BROŠURU" />
+                <Button  />
             </a>
         </div>
 

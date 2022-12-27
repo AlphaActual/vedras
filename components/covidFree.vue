@@ -3,8 +3,8 @@
         <div class="covid-image fade-in mr-xs"></div>
         <div class="covid-text delay-50 fade-from-bottom ml-xs plr-lg ptb-md">
             <h3 class="covid-title">#covidfree</h3>
-            <p class="ptb-sm">Primjenom Ultraljubičastog svjetla, (ultravioletnog, UV-c), UVD-robot uništava strukturu DNA u svim mikroorganizmima.</p> 
-            <p>Pružamo uslugu čišćenja velikih i malih prostora, uz pomoć robota, koji u najkraćem mogućem roku i autonomno dezinficiraju zatvorene prostore gdje sigurnost i “osjećaj čistoće” mora biti na prvom mjestu.</p>
+            <p class="ptb-sm">{{ $t('uv-p') }}</p> 
+            <p>{{ $t('cleaning-service-p') }}</p>
         </div>
     </section>
 </template>
